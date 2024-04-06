@@ -5,7 +5,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
 
 # Carregando o conjunto de dados a partir do arquivo CSV
-df = pd.read_csv('C:\Users\2021206415\Documents\fael\treinamento_alunos.csv')
+df = pd.read_csv("./treinamento_alunos.csv")
 
 # Separando os dados em features (X) e target (y)
 X = df.drop(columns=['Original_NU_NOTA_REDACAO'])  # previsões
@@ -19,7 +19,7 @@ y = df['Original_NU_NOTA_REDACAO']  # variável que queremos prever
 # (y_train): Conjunto de targets correspondentes ao treinamento.
 # (y_test:) Conjunto de targets correspondentes ao teste.
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=25)
 
 # Criando e treinando o modelo Gradient Boosting
 gb_model = GradientBoostingRegressor()
